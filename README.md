@@ -1,3 +1,3 @@
 # Solo-Project
 
-A simple recipe book app to track recipes
+A simple app to track recipes
