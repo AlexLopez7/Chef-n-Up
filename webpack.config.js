@@ -2,7 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './client/index.js',
+  entry: {
+    src: './client/index.js'
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -19,6 +21,10 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use : ['style-loader', 'css-loader']
       }
     ]
   },
@@ -30,6 +36,12 @@ module.exports = {
   ],
 
   devServer: {
-    port: 8080
+    static: {
+      publicPath: '/dist',
+      directory: path.resolve(__dirname, 'dist')
+    },
+    proxy: {
+      '/': 'http://localhost:3000'
+    }
   }
 }

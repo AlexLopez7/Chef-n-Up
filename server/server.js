@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors')
 require('dotenv').config();
 
 const path = require('path');
@@ -9,14 +11,16 @@ const PORT = 3000
 const app = express();
 
 // parses incoming request body
+app.use(cors());
 app.use(express.json());
-// app.use(express.urlencoded({ extends: true }));
+app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // import routers
 const recipeRouter = require(path.join(__dirname, '/routes/recipeRoutes.js'));
 
 // set up route
-app.use('/', recipeRouter);
+app.use('/recipe', recipeRouter);
 
 
 

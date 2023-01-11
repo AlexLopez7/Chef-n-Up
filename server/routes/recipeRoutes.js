@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const Recipe = require('../models/recipeModel');
 const recipeController = require('../controllers/recipeController.js')
 
 
@@ -21,7 +20,7 @@ router.delete('/:id', recipeController.deleteRecipe, (req, res) => {
 
 // edit/update a recipe
 router.patch('/:id',recipeController.updateRecipe, (req, res) => {
-  res.status(200).json(res.locals.updatedRecipe)
+  res.status(200).json(res.locals.updatedRecipe);
 });
 
 

@@ -4,7 +4,6 @@ const recipeController = {};
 
 // get all recipes
 recipeController.getAllRecipes = (req, res, next) => {
-  const id = req.params.id;
 
   Recipe.find().sort({name: 1})
   .then(recipes => {
