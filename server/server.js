@@ -22,7 +22,14 @@ const recipeRouter = require(path.join(__dirname, '/routes/recipeRoutes.js'));
 // set up route
 app.use('/recipe', recipeRouter);
 
+app.get('/signup', (req, res) => {
+  res.sendStatus(200);
+})
 
+
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.resolve('../components/index.html'));
+// })
 
 // global error handler
 app.use((err, req, res, next) => {

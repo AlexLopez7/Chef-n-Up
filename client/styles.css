@@ -14,7 +14,8 @@
 }
 
 body {
-  background-color: red;
+  background-color: lightgrey;
+  justify-content: center;
 }
 
 #header {
@@ -24,6 +25,21 @@ body {
   justify-content: left;
   align-items: center;
   padding-left: 3em;
+}
+
+.page{
+  display: flex;
+  justify-content: center;
+}
+
+.login, .signup {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin-top: 50px;
 }
 
 .homePage {
@@ -38,8 +54,6 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-
-
 }
 
 .recipeDetails {

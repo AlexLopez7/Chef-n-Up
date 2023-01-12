@@ -7,11 +7,8 @@ function RecipeForm() {
   const [error, setError] = useState(null);
 
   function handleSubmit(e) {
-    // e.preventDefault(); // prevents reload of page when submit button is clicked
+    e.preventDefault(); // prevents reload of page when submit button is clicked
     const recipe = {name, ingredients, instructions};
-
-    console.log(recipe);
-    console.log('handleSubmit fired');
 
     fetch('/recipe', {
       method: 'POST',

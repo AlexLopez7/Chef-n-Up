@@ -29,6 +29,7 @@ function Home() {
   return (
     <div className="homePage">
       <RecipeForm />
+      <h1>Recipe List</h1>
       <div id='recipes'>{recipeArr}</div>
     </div>
   )
