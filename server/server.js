@@ -18,13 +18,12 @@ app.use(bodyParser.json());
 
 // import routers
 const recipeRouter = require(path.join(__dirname, '/routes/recipeRoutes.js'));
+const usersRoute = require(path.join(__dirname, '/routes/usersRoutes.js'));
 
 // set up route
 app.use('/recipe', recipeRouter);
+app.use('/signup', usersRoute);
 
-app.get('/signup', (req, res) => {
-  res.sendStatus(200);
-})
 
 
 // app.get('/*', (req, res) => {

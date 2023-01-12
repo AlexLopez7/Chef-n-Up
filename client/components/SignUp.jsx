@@ -9,8 +9,21 @@ function SignUp() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    const user = {username, password};
+
     console.log('sign up button clicked')
-    navigate('/recipe');
+    // navigate('/recipe');
+    fetch('http://localhost:3000/signup', {
+      method: 'POST',
+      headers: {
+        accept: 'application.json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+    .then(data => data.json())
+    .then(user => console.log(user))
+    .catch(err => console.log(err));
   }
 
   return (
