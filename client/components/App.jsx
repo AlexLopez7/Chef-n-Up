@@ -13,7 +13,7 @@ function App() {
       <Header />
         <div className="page">
           <Routes>
-            <Route path = '/' element = {<Home />} />
+            <Route path = '/recipe' element = {<Home />} />
           </Routes>
         </div>
       </BrowserRouter>

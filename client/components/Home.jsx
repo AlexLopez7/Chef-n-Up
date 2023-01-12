@@ -1,7 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
+// import components
 import RecipePost from "./RecipeDetails.jsx";
+import RecipeForm from "./RecipeForm.jsx";
 
 function Home() {
 
@@ -26,7 +28,7 @@ function Home() {
   
   return (
     <div className="homePage">
-      <h1>Home Page</h1>
+      <RecipeForm />
       <div id='recipes'>{recipeArr}</div>
     </div>
   )

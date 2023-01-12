@@ -1,9 +1,12 @@
 import React from "react"
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div id = 'header'>
-      <h1>Chef'n Up</h1>
+      <Link to='/recipe'>
+        <h1>Chef'n Up</h1>
+      </Link>
     </div>
   )
 }
