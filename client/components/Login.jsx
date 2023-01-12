@@ -36,7 +36,7 @@ function Login() {
         value={password}
       />
 
-      <div>
+      <div className="buttonCont">
         <button onClick={handleSubmit}>Sign In</button>
         <button onClick={redirectSignup}>Sign Up</button>
       </div>

@@ -13,7 +13,7 @@ function SignUp() {
 
     console.log('sign up button clicked')
     // navigate('/recipe');
-    fetch('http://localhost:3000/signup', {
+    fetch('/signup', {
       method: 'POST',
       headers: {
         accept: 'application.json',
@@ -27,7 +27,7 @@ function SignUp() {
   }
 
   return (
-    <form className="signup">
+    <form className="signup" onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
       <label>Username</label>
       <input 
@@ -43,7 +43,7 @@ function SignUp() {
         value={password}
       />
 
-      <button onClick={handleSubmit}>Sign Up</button>
+      <button>Sign Up</button>
     </form>
   )
 }
