@@ -1,3 +1,3 @@
-# Solo-Project
+# Chef-N-Up
 
-A simple app to track recipes
+A simple app to keep track of all your recipes in one place
